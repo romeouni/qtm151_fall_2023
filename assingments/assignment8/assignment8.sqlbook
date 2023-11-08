@@ -4,7 +4,7 @@
 ## Submit this file. No need to convert to HTML
 -- SQLBook: Markup
 <font size = "5">
-Print your name below
+Add a comment with your Emory ID below
 -- SQLBook: Code
 -- Active: 1698696007503@@127.0.0.1@5432@formula1@public
 -- Write your own code
@@ -100,7 +100,7 @@ SELECT COUNT(DISTINCT "driverId") FROM drivers AS num_distinct_drivers
 <font size = "3">
 
 - Obtain the average of "milliseconds" by "driverId" using ```GROUP BY```
-- User ```ORDER BY ``` to sort on the sum of points
+- Use ```ORDER BY ``` to sort by the average of "milliseconds"
 
 HINT: See the end of lectures 17 and 18 for details <br>
 HINT: Include "driverId" in quotations since it has a mix of <br>
