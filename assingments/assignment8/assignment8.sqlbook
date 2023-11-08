@@ -6,9 +6,9 @@
 <font size = "5">
 Print your name below
 -- SQLBook: Code
--- Active: 1698696007503@@127.0.0.1@5432@formula1
+-- Active: 1698696007503@@127.0.0.1@5432@formula1@public
 -- Write your own code
-PRINT 'Rahul Ulman';
+SELECT 'Rahul Ulman' AS "YourName"
 -- SQLBook: Markup
 <font size = "5">
 
@@ -106,12 +106,10 @@ HINT: See the end of lectures 17 and 18 for details <br>
 HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
--- Active: 1698696007503@@127.0.0.1@5432@formula1@public
+-- Active: 1698696007503@@127.0.0.1@5432@formula1
 -- Write your own code
-SELECT * FROM lap_times
-LEFT JOIN drivers ON "driverId"
-SELECT AVG(milliseconds), "driverId", point
-
+SELECT AVG(milliseconds) FROM lap_times
+GROUP BY "driverId"
 -- SQLBook: Markup
 <font size = "5">
 
@@ -127,4 +125,8 @@ HINT: See the lecture 18 for details <br>
 HINT: Include "driverId" in quotations since it has a mix of <br>
 upper case and lower case letters
 -- SQLBook: Code
+-- Active: 1698696007503@@127.0.0.1@5432@formula1@public
 -- Write your own code
+SELECT * FROM lap_times
+LEFT JOIN drivers
+ON lap_times."driverId" = drivers."driverId"
